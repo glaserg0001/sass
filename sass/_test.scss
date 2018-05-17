@@ -1,0 +1,16 @@
+.box {
+	display: flex;
+	list-style: none;
+	li {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100px;
+		height: 100px;
+		margin: 20px;
+		border: 2px solid #f88;
+		background-color: #f1f1f1;
+		font: 700 16px sans-serif;
+		text-transform: capitalize;
+	}
+}
