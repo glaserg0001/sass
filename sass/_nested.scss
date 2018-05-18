@@ -1,1 +1,21 @@
-/* Nested Rules */
+/* Nested Rules start*/
+p {
+	color: #333;
+	font-size: 1.2em;
+	.block & {
+		color: #999;
+		font-size: 1.2em;
+	}
+}
+.block {
+	padding: 20px;
+	margin-bottom: 20px;
+	color: #000;
+	font-size: 14px;
+	.link {
+		display: inline-block;
+		text-decoration: none;
+	}
+}
+/* Nested Rules end*/
+// .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
