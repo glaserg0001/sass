@@ -1,0 +1,11 @@
+/*Comments start*/
+
+$txt: "this text displayed in the comment";
+// this comment won't be displayed in the CSS
+
+/*
+	this comment will be displayed in the CSS.
+	interpolation within comments is resolved - #{$txt}.
+*/
+
+/*Comments end*/

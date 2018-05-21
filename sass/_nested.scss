@@ -1,4 +1,4 @@
-/* Nested Rules start*/
+ /*Nested Rules start*/
 p {
 	color: #333;
 	font-size: 1.2em;
@@ -14,8 +14,39 @@ p {
 	font-size: 14px;
 	.link {
 		display: inline-block;
-		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
-
 /* Nested Rules end*/
+
+/*Nested Properties start*/
+.element {
+	font: {
+		family: serif;
+		size: 1.2em;
+		weight: 700;
+	}
+	/**/
+	font: 1.2em/1.2 serif {
+    weight: 700;
+  }
+}
+/*Nested Properties end*/
+
+/*Placeholder Selectors start*/
+%grid {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	border: 2px solid #e5e5e5;
+	& > .column {
+		width: 23%;
+		margin: 1%;
+	}
+}
+.items {
+	@extend %grid;
+}
+/*Placeholder Selectors end*/

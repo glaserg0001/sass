@@ -68,7 +68,7 @@ a[data-title]:hover:before {
   transition: width .4s;
 }
 
-h2 {
+h2, h3 {
   position: relative;
   padding-bottom: 5px;
   margin-bottom: .5em;
@@ -76,7 +76,7 @@ h2 {
   color: #808c99;
 }
 
-h2:before {
+h2:before, h3:before {
   content: '';
   position: absolute;
   left: 0;
@@ -86,7 +86,15 @@ h2:before {
   background-color: #d5d9dd;
 }
 
-/* Nested Rules start*/
+h3 {
+  font-size: 28px;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+/*Nested Rules start*/
 p {
   color: #333;
   font-size: 1.2em;
@@ -106,7 +114,57 @@ p {
 
 .block .link {
   display: inline-block;
+}
+
+.block .link:hover {
   text-decoration: none;
 }
 
 /* Nested Rules end*/
+/*Nested Properties start*/
+.element {
+  font-family: serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  /**/
+  font: 1.2em/1.2 serif;
+  font-weight: 700;
+}
+
+/*Nested Properties end*/
+/*Placeholder Selectors start*/
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  border: 2px solid #e5e5e5;
+}
+
+.items > .column {
+  width: 23%;
+  margin: 1%;
+}
+
+/*Placeholder Selectors end*/
+/*Comments start*/
+/*
+	this comment will be displayed in the CSS.
+	interpolation within comments is resolved - this text displayed in the comment.
+*/
+/*Comments end*/
+/*SassScript start*/
+.rectangle {
+  width: 200px;
+  height: 100px;
+  border: 2px solid #d3d3d3;
+  font-size: 20px;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fdfdfd;
+  font-size: 20px;
+}
+
+/*SassScript end*/

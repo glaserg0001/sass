@@ -1,0 +1,22 @@
+/*SassScript start*/
+$size: 100px;
+$color-gray: #d3d3d3;
+.rectangle {
+	width: $size * 2;
+	height: $size;
+	border: 2px solid $color_gray;
+
+	$font-size-global: 20px !global;
+	font-size: $font-size-global;
+}
+
+.square {
+	width: $size;
+	height: $size;
+	border: 2px solid 
+	1.2*$color_gray;
+	font-size: $font_size_global;
+}
+
+
+/*SassScript end*/
