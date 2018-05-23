@@ -152,7 +152,8 @@ p {
 	interpolation within comments is resolved - this text displayed in the comment.
 */
 /*Comments end*/
-/*SassScript start*/
+/*==SassScript start==*/
+/*variables start*/
 .rectangle {
   width: 200px;
   height: 100px;
@@ -167,4 +168,40 @@ p {
   font-size: 20px;
 }
 
-/*SassScript end*/
+/*variables end*/
+/*lists start*/
+.lists {
+  padding: 10px;
+  font-family: sans-serif;
+  margin: 100px 200px 300px 400px;
+  margin: 50px, 60px, 70px, 80px;
+  padding: 100px 200px 300px 400px;
+  padding: 11px, 12px, 14px;
+  padding: 10px 20px 30px;
+}
+
+/*lists end*/
+/*maps start*/
+.message-primary {
+  background: #000;
+}
+
+.message-success {
+  background: #27BA6C;
+}
+
+.message-info {
+  background: #03a9f4;
+}
+
+.message-warning {
+  background: #FF8833;
+}
+
+.message-danger {
+  background: #ff1a1a;
+}
+
+/*maps end*/
+/*https://sass-scss.ru/documentation/sassscript/operatsii.html*/
+/*==SassScript end==*/

@@ -1,6 +1,9 @@
-/*SassScript start*/
+/*==SassScript start==*/
+
+/*variables start*/
 $size: 100px;
 $color-gray: #d3d3d3;
+
 .rectangle {
 	width: $size * 2;
 	height: $size;
@@ -13,10 +16,53 @@ $color-gray: #d3d3d3;
 .square {
 	width: $size;
 	height: $size;
-	border: 2px solid 
-	1.2*$color_gray;
+	border: 2px solid 1.2*$color_gray;
 	font-size: $font_size_global;
 }
+/*variables end*/
 
+/*lists start*/
+.lists {
+	$list1: 100px 200px;
+	$list2: 300px 400px;
+	// get access items in a list
+	padding: nth(10px 20px 30px, 1);
+	font: {
+		family: nth((Helvetica, Arial, sans-serif), 3);
+	}
+	// join function can join multiple lists together
+	margin: join($list1, $list2);
+	margin: join((50px, 60px), (70px, 80px));
+	// append function can add items to lists
 
-/*SassScript end*/
+	padding: append($list1, $list2);
+	padding: append((11px, 12px), 14px);
+	padding: append(10px 20px, 30px);
+}
+/*lists end*/
+
+/*maps start*/
+$status-colors: (
+
+	primary: #000,
+	success: #27BA6C,
+	info: #03a9f4,
+	warning: #FF8833,
+	danger: #ff1a1a
+);
+
+.message {
+
+	@each $status, $color in $status-colors { 
+
+		&-#{$status} {
+
+			background: $color;
+		}
+	}
+}
+/*maps end*/
+
+/*https://sass-scss.ru/documentation/sassscript/operatsii.html*/
+
+/*==SassScript end==*/
