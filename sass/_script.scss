@@ -63,6 +63,24 @@ $status-colors: (
 }
 /*maps end*/
 
-/*https://sass-scss.ru/documentation/sassscript/operatsii.html*/
+/*Operations start*/
+.numbers {
+	width: 10px + 10px;
+	height: 10px * 1.5;
+	// division
+	$width: 1000px;
+	$font-size: 12px;
+  $line-height: 1.2;
+	font: 14px/1.4;
+	width: $width / 2;
+	width: round(7.5px) / 2;
+	height: (1000px / 2);
+	padding: 10px + 20px / 4px;
+	line-height: $font-size/$line-height * 10;
+  font: #{$font-size}/#{$line-height};
+}
 
+// https://sass-scss.ru/documentation/sassscript/tsvetovie_operatsii.html
+
+/*Operations end*/
 /*==SassScript end==*/

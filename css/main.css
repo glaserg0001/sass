@@ -203,5 +203,18 @@ p {
 }
 
 /*maps end*/
-/*https://sass-scss.ru/documentation/sassscript/operatsii.html*/
+/*Operations start*/
+.numbers {
+  width: 20px;
+  height: 15px;
+  font: 14px/1.4;
+  width: 500px;
+  width: 4px;
+  height: 500px;
+  padding: 15px;
+  line-height: 100px;
+  font: 12px/1.2;
+}
+
+/*Operations end*/
 /*==SassScript end==*/
