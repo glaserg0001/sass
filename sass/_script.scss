@@ -79,7 +79,7 @@ $status-colors: (
 	line-height: $font-size/$line-height * 10;
   font: #{$font-size}/#{$line-height};
 }
-
+@import "colors";
 // https://sass-scss.ru/documentation/sassscript/tsvetovie_operatsii.html
 
 /*Operations end*/

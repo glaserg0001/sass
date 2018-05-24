@@ -216,5 +216,18 @@ p {
   font: 12px/1.2;
 }
 
+/* colors start */
+.color {
+  background-color: #333333;
+  color: #03fcff;
+  color: rgba(3, 252, 255, 0.5);
+  color: #abc;
+  color: 170;
+  color: 187;
+  color: 204;
+  color: #4000bf;
+}
+
+/* colors end */
 /*Operations end*/
 /*==SassScript end==*/

@@ -1,0 +1,17 @@
+/* colors start */
+
+// $color: hsl(100deg, 50%, 50%);
+$color: #abc;
+
+.color {
+	background-color: #111 + #222;
+	color: rgb(1%, 99%, 100%);
+	color: rgba(1%, 99%, 100%, .5);
+	color: $color;
+	color: red($color);
+	color: green($color);
+	color: blue($color);
+
+	color: mix(#f00, #00f, 25%);
+}
+/* colors end */
