@@ -219,15 +219,51 @@ p {
 /* colors start */
 .color {
   background-color: #333333;
+  /*1*/
   color: #03fcff;
   color: rgba(3, 252, 255, 0.5);
+  /*2*/
   color: #abc;
   color: 170;
   color: 187;
   color: 204;
+  /*3*/
   color: #4000bf;
+  /*4*/
+  color: 210deg;
+  color: 25%;
+  color: 73.33333%;
+  /*5*/
+  color: #b0aacc;
+  color: #cad5df;
+  color: #8aa2b9;
+  /*6*/
+  color: #a3bbd3;
+  color: #b1bbc5;
+  color: #bbbbbb;
+  color: #ccbbaa;
+  color: #554433;
+  /*7*/
+  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 /* colors end */
+/*strings start*/
+.string:before {
+  content: "quotes text";
+  content: text quotes;
+  content: text-text;
+  content: "text before 30 text after";
+}
+
+/*strings end*/
+/*boolean start*/
+.boolean {
+  z-index: 2;
+  z-index: 3;
+}
+
+/*boolean end*/
 /*Operations end*/
 /*==SassScript end==*/

@@ -5,13 +5,32 @@ $color: #abc;
 
 .color {
 	background-color: #111 + #222;
+	/*1*/
 	color: rgb(1%, 99%, 100%);
 	color: rgba(1%, 99%, 100%, .5);
+	/*2*/
 	color: $color;
 	color: red($color);
 	color: green($color);
 	color: blue($color);
-
+	/*3*/
 	color: mix(#f00, #00f, 25%);
+	/*4*/
+	color: hue($color);
+	color: saturation($color);
+	color: lightness($color);
+	/*5*/
+	color: adjust-hue($color, 40deg);
+	color: lighten($color, 10%);
+	color: darken($color, 10%);
+	/*6*/
+	color: saturate($color, 10%);
+	color: desaturate($color, 10%);
+	color: grayscale($color);
+	color: complement($color);
+	color: invert($color);
+	/*7*/
+	color: opacify(rgba(0, 0, 0, .5), .1);
+	color: transparentize(rgba(0, 0, 0, .5), .1);
 }
 /* colors end */

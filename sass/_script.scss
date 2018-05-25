@@ -79,8 +79,36 @@ $status-colors: (
 	line-height: $font-size/$line-height * 10;
   font: #{$font-size}/#{$line-height};
 }
+
 @import "colors";
-// https://sass-scss.ru/documentation/sassscript/tsvetovie_operatsii.html
+
+/*strings start*/
+.string {
+	&:before {
+		content: 'quotes ' + text;
+		content: text + ' quotes';
+		content: text + -text;
+		content: "text before #{10 + 20} text after";
+	}
+}
+/*strings end*/
+/*boolean start*/
+.boolean {
+	$var1: true;
+	$var2: false;
+	@if $var1 and $var2 {
+		z-index: 1;
+	}
+	@if $var1 or $var2 {
+		z-index: 2;
+	}
+	@if $var1 not $var2 {
+		z-index: 3;
+	}
+}
+/*boolean end*/
+
+// https://sass-scss.ru/documentation/sassscript/bulevi_operatsii.html
 
 /*Operations end*/
 /*==SassScript end==*/
