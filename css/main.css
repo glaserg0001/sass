@@ -203,7 +203,6 @@ p {
 }
 
 /*maps end*/
-/*Operations start*/
 .numbers {
   width: 20px;
   height: 15px;
@@ -214,6 +213,18 @@ p {
   padding: 15px;
   line-height: 100px;
   font: 12px/1.2;
+  /*1*/
+  width: 20%;
+  width: 150%;
+  width: 5px;
+  width: 7px;
+  width: 8px;
+  /*2*/
+  width: 10px;
+  width: 1;
+  width: 8;
+  line-height: 1.80551;
+  width: 13px;
 }
 
 /* colors start */
@@ -255,15 +266,44 @@ p {
   content: text quotes;
   content: text-text;
   content: "text before 30 text after";
+  /*1*/
+  content: text;
+  content: "text";
+  content: 4;
+  content: aaAAaa;
+  content: 2;
+  /*2*/
+  content: "bc";
+  content: "bcdehx";
+  content: "TO UPPER CASE";
+  content: "to lower case";
 }
 
 /*strings end*/
 /*boolean start*/
 .boolean {
+  z-index: 1;
   z-index: 2;
   z-index: 3;
 }
 
 /*boolean end*/
-/*Operations end*/
+/* & symbol start */
+.symbol:hover {
+  color: red;
+}
+
+.symbol-link {
+  color: red;
+}
+
+/*  & symbol end */
+/*Variable defaults start*/
+.variables-to-default {
+  content: "Test text";
+  content: "Default test text";
+  content: "not-null";
+}
+
+/*Variable defaults ens*/
 /*==SassScript end==*/
