@@ -4,4 +4,18 @@
 	@import "example";
 }
 // @media
+.media {
+	$media: screen;
+	$feature: max-width;
+	$value: 768px;
+
+	width: 1000px;
+	@media #{$media} {
+		@media ($feature: $value) {
+			width: 700px;
+		}
+	}
+}
+
+
 /* DIRECTIVES end*/ 
