@@ -1,8 +1,10 @@
 /* DIRECTIVES start*/
+
 // @import
 .import {
 	@import "example";
 }
+
 // @media
 .media {
 	$media: screen;
@@ -17,5 +19,35 @@
 	}
 }
 
+/*@extend start*/
+.extend {
+	padding: 10px;
+	border: 1px solid #f00;
+	border-radius: 5px;
+	font-size: 12px;
+	&.font-large {
+		font-size: 16px;
+	}
+}
+.linkhover {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.extendOtherDefoult {
+	color: #888;
+}
+.extendOther {
+	@extend .extendOtherDefoult;
+	line-height: 1.2;
+	max-width: 500px;
+}
+.extendAdditional {
+	@extend .extend;
+	@extend .extendOther;
+	@extend .linkhover:hover;
+	background-color: #e4e4e4;
+}
+/*@extend end*/
 
 /* DIRECTIVES end*/ 

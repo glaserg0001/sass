@@ -229,8 +229,8 @@ p {
   width: 10px;
   width: 1;
   width: 8;
-  line-height: 1.28431;
-  width: 15px;
+  line-height: 1.00309;
+  width: 12px;
 }
 
 /* colors start */
@@ -333,4 +333,34 @@ p {
   }
 }
 
+/*@extend start*/
+.extend, .extendAdditional {
+  padding: 10px;
+  border: 1px solid #f00;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.extend.font-large, .font-large.extendAdditional {
+  font-size: 16px;
+}
+
+.linkhover:hover, .extendAdditional {
+  text-decoration: underline;
+}
+
+.extendOtherDefoult, .extendOther, .extendAdditional {
+  color: #888;
+}
+
+.extendOther, .extendAdditional {
+  line-height: 1.2;
+  max-width: 500px;
+}
+
+.extendAdditional {
+  background-color: #e4e4e4;
+}
+
+/*@extend end*/
 /* DIRECTIVES end*/
