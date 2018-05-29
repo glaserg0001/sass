@@ -10,6 +10,10 @@ body {
 	padding: 20px;
 	box-sizing: border-box;
 	font-family: sans-serif;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-color: lighten(#b3e5fc, 10%);
 }
 a {
 	position: relative;
@@ -75,7 +79,7 @@ h2 {
 		bottom: 0;
 		width: 80px;
 		height: 3px;
-		background-color: lighten(#808c99, 30%);
+		background-color: lighten(#03a9f4, 20%);
 	}
 }
 
@@ -86,4 +90,6 @@ h3 {
 
 hr {
 	margin: 20px 0;
+	border: 1px solid rgba(#03a9f4, .2);
+	border-bottom: none;
 }

@@ -8,6 +8,10 @@ body {
   padding: 20px;
   box-sizing: border-box;
   font-family: sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #e4f6fe;
 }
 
 a {
@@ -83,7 +87,7 @@ h2:before, h3:before {
   bottom: 0;
   width: 80px;
   height: 3px;
-  background-color: #d5d9dd;
+  background-color: #60ccfd;
 }
 
 h3 {
@@ -92,6 +96,8 @@ h3 {
 
 hr {
   margin: 20px 0;
+  border: 1px solid rgba(3, 169, 244, 0.2);
+  border-bottom: none;
 }
 
 /*Nested Rules start*/
@@ -223,8 +229,8 @@ p {
   width: 10px;
   width: 1;
   width: 8;
-  line-height: 1.80551;
-  width: 13px;
+  line-height: 1.139;
+  width: 11px;
 }
 
 /* colors start */
@@ -307,3 +313,14 @@ p {
 
 /*Variable defaults ens*/
 /*==SassScript end==*/
+/* DIRECTIVES start*/
+.import .example {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  color: #000;
+  border: 2px solid;
+  font-size: 16px;
+}
+
+/* DIRECTIVES end*/
