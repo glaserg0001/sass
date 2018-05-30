@@ -49,4 +49,12 @@ p {
 .items {
 	@extend %grid;
 }
+.content a%placeholder {
+	font-weight: 700;
+	font-size: 20px;
+	color: #999;
+}
+.notice {
+	@extend %placeholder;
+}
 /*Placeholder Selectors end*/

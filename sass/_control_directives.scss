@@ -1,0 +1,88 @@
+/* CONTROL DIRECTIVES start */
+/* if() start */
+@mixin ternary-if ($condition) {
+	width: if($condition, 1000px, 600px)
+}
+.ternary-if {
+	@include ternary-if(true);
+	@media (max-width: 768px) {
+		@include ternary-if(false);
+		
+	}
+}
+/* if() end */
+/* @if start */
+.dir-if {
+	@if 1 + 1 == 2 {z-index: 1;}
+	@if 1 == 2 {z-index: 2;}
+	@if null {z-index: 3;}
+	/**/
+	$val: 1;
+
+	@if $val == 1 {
+		width: 100px;
+	}
+	@else if $val == 2 {
+		width: 200px;
+	}
+	@else if $val == 3 {
+		width: 300px;
+	}
+	@else {
+		width: 100%;
+	}
+}
+/* @if end */
+
+/* @for start */
+/* through */
+@for $i from 1 through 3 {
+	.item_#{$i} {
+		z-index: $i;
+	}
+}
+/*to*/
+@for $i from 4 to 7 {
+	.item_to_#{$i} {
+		z-index: $i;
+	}
+}
+/* @for end */
+
+/* @each start */
+@each $color in red, green, blue {
+	.color_#{$color} {
+		color: $color;
+	}
+}
+
+$z-list: 2 ,4, 6;
+@each $i in $z-list {
+	.z {
+		z-index: $i;
+	}
+}
+/* @each multiple */
+/* list */
+$base_width: 150px;
+$list-multiple: ($base_width * 1, red, 1), ($base_width * 1.5, green, 2), ($base_width * 2, blue, 3);
+@each $size, $color, $z-index in $list-multiple {
+	.block_#{$color} {
+		display: inline-block;
+		width: $size;
+		height: $size * 2;
+		background-color: $color;
+		color: invert(darken($color, 10%));
+		z-index: $z-index;
+	}
+}
+/* map */
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+  #{$header} {
+    font-size: $size;
+  }
+}
+
+/* @each end */
+
+/* CONTROL DIRECTIVES end */

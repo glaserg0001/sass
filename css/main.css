@@ -151,6 +151,12 @@ p {
   margin: 1%;
 }
 
+.content a.notice {
+  font-weight: 700;
+  font-size: 20px;
+  color: #999;
+}
+
 /*Placeholder Selectors end*/
 /*Comments start*/
 /*
@@ -229,8 +235,8 @@ p {
   width: 10px;
   width: 1;
   width: 8;
-  line-height: 1.00309;
-  width: 12px;
+  line-height: 1.20965;
+  width: 13px;
 }
 
 /* colors start */
@@ -363,4 +369,148 @@ p {
 }
 
 /*@extend end*/
+/*@at-root start*/
+.parent {
+  width: 400px;
+}
+
+.child1 {
+  width: 180px;
+}
+
+.child2 {
+  width: 220px;
+}
+
+.parent .child3 {
+  width: 100%;
+}
+
+/*@at-root end*/
+/*@warn start*/
+.warn {
+  position: relative;
+  left: 2px;
+  top: 4px;
+}
+
+/*@warn end*/
 /* DIRECTIVES end*/
+/* CONTROL DIRECTIVES start */
+/* if() start */
+.ternary-if {
+  width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .ternary-if {
+    width: 600px;
+  }
+}
+
+/* if() end */
+/* @if start */
+.dir-if {
+  z-index: 1;
+  /**/
+  width: 100px;
+}
+
+/* @if end */
+/* @for start */
+/* through */
+.item_1 {
+  z-index: 1;
+}
+
+.item_2 {
+  z-index: 2;
+}
+
+.item_3 {
+  z-index: 3;
+}
+
+/*to*/
+.item_to_4 {
+  z-index: 4;
+}
+
+.item_to_5 {
+  z-index: 5;
+}
+
+.item_to_6 {
+  z-index: 6;
+}
+
+/* @for end */
+/* @each start */
+.color_red {
+  color: red;
+}
+
+.color_green {
+  color: green;
+}
+
+.color_blue {
+  color: blue;
+}
+
+.z {
+  z-index: 2;
+}
+
+.z {
+  z-index: 4;
+}
+
+.z {
+  z-index: 6;
+}
+
+/* @each multiple */
+/* list */
+.block_red {
+  display: inline-block;
+  width: 150px;
+  height: 300px;
+  background-color: red;
+  color: #33ffff;
+  z-index: 1;
+}
+
+.block_green {
+  display: inline-block;
+  width: 225px;
+  height: 450px;
+  background-color: green;
+  color: #ffb2ff;
+  z-index: 2;
+}
+
+.block_blue {
+  display: inline-block;
+  width: 300px;
+  height: 600px;
+  background-color: blue;
+  color: #ffff33;
+  z-index: 3;
+}
+
+/* map */
+h1 {
+  font-size: 2em;
+}
+
+h2, h3 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/* @each end */
+/* CONTROL DIRECTIVES end */

@@ -48,6 +48,40 @@
 	@extend .linkhover:hover;
 	background-color: #e4e4e4;
 }
+.optional {
+	@extend .optional_ex !optional;
+}
 /*@extend end*/
 
-/* DIRECTIVES end*/ 
+/*@at-root start*/
+.parent {
+	width: 400px;
+	@at-root .child1 {
+		width: 180px;
+	}
+	@at-root .child2 {
+		width: 220px;
+	}
+	.child3 {width: 100%;}
+}
+/*@at-root end*/
+// @debug 10em + 12em;
+
+/*@warn start*/
+@mixin adjust-location($x, $y) {
+	@if unitless($x) {
+		@warn "The value must be in pixels";
+		$x: 1px * $x;
+	}
+	@if unitless($y) {
+		@warn "The value must be in pixels";
+		$y: 1px * $y;
+	}
+	position: relative; left: $x; top: $y;
+}
+.warn {
+	@include adjust-location(2px,4px);
+}
+/*@warn end*/
+
+/* DIRECTIVES end*/
