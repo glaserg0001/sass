@@ -78,11 +78,18 @@ $list-multiple: ($base_width * 1, red, 1), ($base_width * 1.5, green, 2), ($base
 }
 /* map */
 @each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
-  #{$header} {
-    font-size: $size;
-  }
+	#{$header} {
+		font-size: $size;
+	}
 }
 
 /* @each end */
+/* @while start */
+$i: 6;
+@while $i > 0 {
+	.item-#{$i} { width: 100px * $i; }
+	$i: $i - 2;
+}
+/* @while end */
 
 /* CONTROL DIRECTIVES end */

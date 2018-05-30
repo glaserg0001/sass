@@ -235,8 +235,8 @@ p {
   width: 10px;
   width: 1;
   width: 8;
-  line-height: 1.20965;
-  width: 13px;
+  line-height: 1.77679;
+  width: 9px;
 }
 
 /* colors start */
@@ -513,4 +513,18 @@ h3 {
 }
 
 /* @each end */
+/* @while start */
+.item-6 {
+  width: 600px;
+}
+
+.item-4 {
+  width: 400px;
+}
+
+.item-2 {
+  width: 200px;
+}
+
+/* @while end */
 /* CONTROL DIRECTIVES end */
