@@ -7,7 +7,6 @@
 	@include ternary-if(true);
 	@media (max-width: 768px) {
 		@include ternary-if(false);
-		
 	}
 }
 /* if() end */
@@ -77,7 +76,7 @@ $list-multiple: ($base_width * 1, red, 1), ($base_width * 1.5, green, 2), ($base
 	}
 }
 /* map */
-@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+@each $header, $size in ('.h1': 2em, '.h2': 1.5em, '.h3': 1.2em) {
 	#{$header} {
 		font-size: $size;
 	}

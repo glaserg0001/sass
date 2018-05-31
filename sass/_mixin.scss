@@ -1,0 +1,112 @@
+/* MIXIN start */
+@mixin mix_1 {
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #f00;
+	background-color: #f4f4f4;
+}
+.block_1 {
+	@include mix_1;
+	width: 100%;
+	padding: 10px;
+}
+// with &
+@mixin clearfix {
+	display: inline-block;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+.block_2 {
+	@include clearfix;
+}
+
+/* mixin in root */
+@mixin mixin-root {
+	.mixin-root {
+		display: block;
+		width: 100%;
+		max-width: 400px;
+		padding: 10px;
+		margin: 0 auto;
+		font-size: 16px;
+		color: #444;
+		background-color: #d4d4d4;
+		border: 2px solid;
+	}
+}
+
+@include mixin-root;
+/* include other mixins */
+@mixin compound {
+	@include highlighted-background;
+	@include header-text;
+}
+@mixin highlighted-background { background-color: #fc0; }
+@mixin header-text { font-size: 20px; }
+.compound {
+	@include compound;
+}
+/* arguments in mixin */
+@mixin arguments($size, $color: red, ...) {
+	width: $size;
+	height: $size * .8;
+	color: $color;
+}
+.arguments {
+	@include arguments(100px, green);
+}
+.arguments2 {
+	@include arguments(200px);
+}
+
+@mixin arguments_optional($value: content-box) {
+	box-sizing: $value;
+}
+.arguments_optional {
+	@include arguments_optional(border-box);
+}
+.arguments_optional2 {
+	@include arguments_optional
+}
+/* if in mixin */
+@mixin arg-if($value: cover) {
+	@if $value == cover or $value == contain  {
+		background-position: center;
+	}
+	background-size: $value;
+}
+
+.arg-if {
+	@include arg-if(cover);
+	/**/
+	@include arg-if(contain);
+	/**/
+	@include arg-if(100%);
+}
+/* each in mixin */
+@mixin arg-each($property, $value, $prefixes: ()) {
+	@each $prefix in $prefixes {
+		#{'-' + $prefix + '-' + $property}: $value;
+	}
+	#{$property}: $value;
+}
+
+.arg-each {
+	@include arg_each(transition, all .3s ease, webkit moz ms o);
+}
+/*variable arguments*/
+@mixin box-shadow($shadows...) {
+	-moz-box-shadow: $shadows;
+	-webkit-box-shadow: $shadows;
+	box-shadow: $shadows;
+}
+
+.shadows {
+	@include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+}
+
+/* MIXIN end */
