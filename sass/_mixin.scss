@@ -98,6 +98,24 @@
 .arg-each {
 	@include arg_each(transition, all .3s ease, webkit moz ms o);
 }
+/* advanced each in mixin */
+@mixin mix_advanced($declarations, $prefixes: ()) {
+	@each $property, $value in $declarations {
+		@each $prefix in $prefixes {
+			#{'-' + $prefix + '-' + $property}: $value;
+		}
+
+		#{$property}: $value;
+	}
+}
+
+.mix_advanced {
+	@include mix_advanced((
+		column-count: 3,
+		column-gap: 1.5em,
+		column-rule: 2px solid black
+		), webkit moz);
+}
 /*variable arguments*/
 @mixin box-shadow($shadows...) {
 	-moz-box-shadow: $shadows;
@@ -106,7 +124,59 @@
 }
 
 .shadows {
-	@include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+	$shadow: 0px 4px 5px #444, 2px 6px 10px #888;
+	@include box-shadow($shadow);
+}
+/* ---- */
+@mixin size($width, $height, $padding) {
+	width: $width;
+	height: $height;
+	padding: $padding;
+	@if $padding {
+		box-sizing: border-box;
+	}
+}
+
+$values: 200px, 100px, null;
+.mix_primary {
+	@include size($values...);
+}
+
+$value-map: (width: 400px, height: null, padding: 40px 80px);
+.mix_secondary {
+	@include size($value-map...);
+}
+
+/* @content in mixins */
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&:-moz-placeholder {@content}
+	&::-moz-placeholder {@content}
+	&:-ms-input-placeholder {@content}
+}
+
+input {
+	@include placeholder {
+		font-size: 16px;
+		color: #444;
+		@include arg_each(transition, all .3s ease, webkit);
+		&:focus {
+			opacity: 0;
+		}
+	}
+}
+
+/* Variable Scope and Content Blocks */
+$colore: white;
+@mixin colors($colore: blue) {
+  background-color: $colore;
+  @content;
+  border-color: $colore;
+}
+.colors {
+  @include colors {
+  	color: $colore;
+  }
 }
 
 /* MIXIN end */

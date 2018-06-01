@@ -235,8 +235,8 @@ p {
   width: 10px;
   width: 1;
   width: 8;
-  line-height: 1.49145;
-  width: 9px;
+  line-height: 1.77642;
+  width: 12px;
 }
 
 /* colors start */
@@ -609,11 +609,94 @@ p {
   transition: all 0.3s ease;
 }
 
+/* advanced each in mixin */
+.mix_advanced {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em;
+  -webkit-column-rule: 2px solid black;
+  -moz-column-rule: 2px solid black;
+  column-rule: 2px solid black;
+}
+
 /*variable arguments*/
 .shadows {
-  -moz-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
-  -webkit-box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
-  box-shadow: 0px 4px 5px #666, 2px 6px 10px #999;
+  -moz-box-shadow: 0px 4px 5px #444, 2px 6px 10px #888;
+  -webkit-box-shadow: 0px 4px 5px #444, 2px 6px 10px #888;
+  box-shadow: 0px 4px 5px #444, 2px 6px 10px #888;
+}
+
+/* ---- */
+.mix_primary {
+  width: 200px;
+  height: 100px;
+}
+
+.mix_secondary {
+  width: 400px;
+  padding: 40px 80px;
+  box-sizing: border-box;
+}
+
+/* @content in mixins */
+input::-webkit-input-placeholder {
+  font-size: 16px;
+  color: #444;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+input::-webkit-input-placeholder:focus {
+  opacity: 0;
+}
+
+input:-moz-placeholder {
+  font-size: 16px;
+  color: #444;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+input:-moz-placeholder:focus {
+  opacity: 0;
+}
+
+input::-moz-placeholder {
+  font-size: 16px;
+  color: #444;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+input::-moz-placeholder:focus {
+  opacity: 0;
+}
+
+input:-ms-input-placeholder {
+  font-size: 16px;
+  color: #444;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+input:-ms-input-placeholder:focus {
+  opacity: 0;
+}
+
+/* Variable Scope and Content Blocks */
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
 }
 
 /* MIXIN end */
+/* FUNCTIONS start */
+#sidebar {
+  width: 390px;
+}
+
+/* FUNCTIONS end */
